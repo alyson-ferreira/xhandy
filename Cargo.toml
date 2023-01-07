@@ -1,0 +1,23 @@
+[package]
+name = "xhandy"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+x11-dl = "2.20.1"
+
+[[bin]]
+name = "xhandy"
+test = false
+bench = false
+
+[profile.dev]
+opt-level = 0
+debug = true
+
+[profile.release]
+opt-level = 3
+debug = false
+
